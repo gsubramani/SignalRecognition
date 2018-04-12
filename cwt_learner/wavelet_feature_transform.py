@@ -146,7 +146,7 @@ class WaveletFeatureTransform:
 if __name__ == "__main__":
     time = [ii / 100.0 for ii in range(1000)]
     sig = np.random.rand(1000)
-    mf = MorletFeatureTransform([sig, sig * 10], time, scaling="log",wavelet="morlet")
+    mf = WaveletFeatureTransform([sig, sig * 10], time, scaling="log",wavelet="morlet")
     print np.shape(mf.feature_matrix(signal_indices=[0], magfunc=lambda x: np.log(np.abs(x)), mag="Yes",
                       phase="No"))
 

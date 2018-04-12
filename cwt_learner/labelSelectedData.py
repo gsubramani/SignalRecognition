@@ -1,7 +1,7 @@
 import numpy as np
 
 __author__ = 'Guru Subramani'
-__doc__ = "A datastructure to hold signals with labeled data. SignalBundle combines both signals and timestamps into" \
+__doc__ = "A data structure to hold signals with labeled data. SignalBundle combines both signals and timestamps into" \
           "a signal-bundle. LabeledData combines the signal-bundles with their labels over time."
 
 class SignalBundle:
