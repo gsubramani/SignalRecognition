@@ -1,5 +1,4 @@
 from wavelets import Morlet,DOG,DOG1,Haar,HaarW
-
 import numpy as np
 from warnings import warn
 
