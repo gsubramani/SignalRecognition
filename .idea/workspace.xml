@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d38bc9c5-8a74-4b17-a1e0-a6085318e603" name="Default" comment="" />
+    <list default="true" id="d38bc9c5-8a74-4b17-a1e0-a6085318e603" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.ipynb" afterPath="$PROJECT_DIR$/example.ipynb" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +98,7 @@
             <entry file="file://$PROJECT_DIR$/example.ipynb">
               <provider selected="true" editor-type-id="ipnb-editor">
                 <state>
-                  <selected id="15" />
+                  <selected id="13" />
                 </state>
               </provider>
             </entry>
@@ -767,7 +769,7 @@
     <entry file="file://$PROJECT_DIR$/example.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="11" />
+          <selected id="13" />
         </state>
       </provider>
     </entry>
