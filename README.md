@@ -23,6 +23,18 @@ You will also need:
 1. Pydblite
 1. Matplotlib
 
+# Details of API
+`cwt_learner` is the main software package.
+
+`wavelet_feature_engineering.py` provides the interface to
+apply machine learning classifiers to the transformed data. The 
+default ML classifier is a `sklearn.neural_network. MLPClassifier`
+but this can be changed to a different classifier. 
+
+`wavelet_feature_transform.py` transforms the time domain multi-channel
+ signal into the continuous wavelet transform. This function 
+interfaces with the `wavelets.py` library. Additional transformations
+ such as extracting magnitude and phase is possible.
 
 
 
