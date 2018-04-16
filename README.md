@@ -18,7 +18,7 @@ Please cite our work!
 1. Numpy
 1. scikit-learn - optional if you are using your own classifier
 
-## For the Example
+## For the Example ([Example.ipynb](https://github.com/gsubramani/SignalRecognition/blob/master/example.ipynb))
 You will also need: 
 1. Pydblite
 1. Matplotlib
