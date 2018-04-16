@@ -11,7 +11,7 @@ features.
 
 Please cite our work!
 
-###[Recognizing actions during tactile manipulations through force sensing](https://ieeexplore.ieee.org/abstract/document/8206302/)
+[Recognizing actions during tactile manipulations through force sensing](https://ieeexplore.ieee.org/abstract/document/8206302/)
 
 # Requirements
 ## For the recognition package CWT_LEARNER
