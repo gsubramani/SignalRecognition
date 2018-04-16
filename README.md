@@ -32,7 +32,7 @@ You will also need:
 
 # How it works
 Time series signals are transformed into the time-frequency domain using
-the Continuous Wavelet Transform. This turns a n-channel signal into a n\*k channel 
+the Continuous Wavelet Transform. This turns a n-channel signal into a k\*n channel 
 signal where k is the number of scales\frequencies of interest, providing
  k\*n features at every sample time. The k\*n features are used to describe
 the local behavior of the signal. These descriptions along with the class label are used
