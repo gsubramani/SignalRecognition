@@ -3,9 +3,9 @@ This python library allows detecting patterns in *n-dimensional
 time domain signals*
 along the *time domain axis*.
 
-![Training Data](https://github.com/gsubramani/SignalRecognition/training_data_fig.png "Training Data")
+![Training Data](https://github.com/gsubramani/SignalRecognition/blob/master/training_data_fig.png "Training Data")
 
-![Test Example](https://github.com/gsubramani/SignalRecognition/test_example_fig.png "Test Example")
+![Test Example](https://github.com/gsubramani/SignalRecognition/blob/master/test_example_fig.png "Test Example")
 
 
 The library uses the Continuous Wavelet Transform, similar to time-frequency 
