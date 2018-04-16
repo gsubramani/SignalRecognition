@@ -21,7 +21,7 @@ Please cite our work!
 ](https://ieeexplore.ieee.org/abstract/document/8206302/)
 
 # Requirements
-## For the recognition package CWT_LEARNER
+## For the package cwt_learner
 1. Numpy
 1. scikit-learn - optional if you are using your own classifier
 
@@ -29,6 +29,15 @@ Please cite our work!
 You will also need: 
 1. Pydblite
 1. Matplotlib
+
+# How it works
+Time series signals are transformed into the time-frequency domain using
+the Continuous Wavelet Transform. This turns a n-channel signal into a n\*k channel 
+signal where k is the number of scales\frequencies of interest, providing
+ k\*n features at every sample time. The k\*n features are used to describe
+the local behavior of the signal. These descriptions along with the class label are used
+to train a ML classifier.
+
 
 # Details of API
 `cwt_learner` is the main software package.
@@ -41,7 +50,8 @@ but this can be changed to a different classifier.
 `wavelet_feature_transform.py` transforms the time domain multi-channel
  signal into the continuous wavelet transform. This function 
 interfaces with the `wavelets.py` library. Additional transformations
- such as extracting magnitude and phase is possible.
+ such as extracting magnitude and phase is possible. The default wavelet
+ is the *morelet* wavelet but other wavelets are also possible. 
 
 
 

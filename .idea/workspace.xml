@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d38bc9c5-8a74-4b17-a1e0-a6085318e603" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.ipynb" afterPath="$PROJECT_DIR$/example.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +34,8 @@
       <file leaf-file-name="wavelet_feature_engineering.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cwt_learner/wavelet_feature_engineering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="304">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="17" />
               <folding>
                 <element signature="e#325#386#0" expanded="true" />
               </folding>
@@ -50,25 +52,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="297">
+                <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="labelSelectedData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cwt_learner/labelSelectedData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
               <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="361">
-                <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -129,8 +131,8 @@
         <option value="$PROJECT_DIR$/cwt_learner/wavelet_feature_transform.py" />
         <option value="$PROJECT_DIR$/cwt_learner/wavelet_feature_engineering.py" />
         <option value="$PROJECT_DIR$/plot_generator.py" />
-        <option value="$PROJECT_DIR$/example.ipynb" />
         <option value="$PROJECT_DIR$/example.py" />
+        <option value="$PROJECT_DIR$/example.ipynb" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -709,14 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cwt_learner/labelSelectedData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cwt_learner/wavelet_feature_transform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -727,10 +721,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="9" />
+    <entry file="file://$PROJECT_DIR$/cwt_learner/labelSelectedData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cwt_learner/wavelet_feature_engineering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#325#386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,21 +749,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cwt_learner/wavelet_feature_engineering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#325#386#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/example.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="361">
-            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <first_editor relative-caret-position="297">
+            <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
             <folding />
           </first_editor>
           <second_editor />
