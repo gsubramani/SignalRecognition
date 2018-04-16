@@ -27,6 +27,18 @@ if __name__ == "__main__":
     cwt_learn.train()
     labels = cwt_learn.fit(testing_data[0].signal_bundle.signals)
 
+    # Plotting
+
+    plt.figure()
+    plt.subplot(16, 1, 1)
+    plt.title("Training Data")
+    for ii in range(0, 8):
+        ax = plt.subplot(16, 1, 2 * ii + 1)
+        plt.plot(training_data[ii].signal_bundle.signals[0])
+        ax.get_yaxis().set_visible(False)
+        plt.subplot(16, 1, 2 * ii + 2)
+        plotResult_colorbars(training_data[ii].labels, range(len(training_data[ii].labels)))
+
     plt.figure()
 
     ax = plt.subplot(2, 1, 1)
@@ -38,4 +50,3 @@ if __name__ == "__main__":
     plotResult_colorbars(labels, range(len(labels)))
 
     plt.show()
-

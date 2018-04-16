@@ -1,9 +1,14 @@
 # Recognizing Events and Signal Shapes in Time Domain Signals
-This python library allows detecting patterns in *ndimensional
+This python library allows detecting patterns in *n-dimensional
 time domain signals*
 along the *time domain axis*.
 
-The library uses the Continuous Wavelet Transform, similar to time frequency 
+![Training Data](https://github.com/gsubramani/SignalRecognition/training_data_fig.png "Training Data")
+
+![Test Example](https://github.com/gsubramani/SignalRecognition/test_example_fig.png "Test Example")
+
+
+The library uses the Continuous Wavelet Transform, similar to time-frequency 
  analysis such as the fourier transform, to transform an *n* dimensional
 time domain signal into *k\*n* dimension signals or *k\*n* features per
 time sample. Then it trains a classifier using the continuous wavelet transform
