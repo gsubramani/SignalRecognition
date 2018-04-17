@@ -36,6 +36,7 @@ if __name__ == "__main__":
         ax = plt.subplot(16, 1, 2 * ii + 1)
         plt.plot(training_data[ii].signal_bundle.signals[0])
         ax.get_yaxis().set_visible(False)
+        ax.get_xaxis().set_visible(False)
         plt.subplot(16, 1, 2 * ii + 2)
         plotResult_colorbars(training_data[ii].labels, range(len(training_data[ii].labels)))
 
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     plt.title("Test Example")
     plt.plot(testing_data[0].signal_bundle.signals[0])
     ax.get_yaxis().set_visible(False)
-
+    ax.get_xaxis().set_visible(False)
     plt.subplot(2, 1, 2)
     plotResult_colorbars(labels, range(len(labels)))
 

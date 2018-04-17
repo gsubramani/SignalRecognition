@@ -1,7 +1,8 @@
-# Recognizing Events and Signal Shapes in Time Domain Signals
+# Recognizing Events and Patterns in Signals
 This python library allows detecting patterns in *n-dimensional
-time domain signals*
-along the *time domain axis*.
+time domain signals*.
+
+Colors represent different labels over time.
 
 ![Training Data](https://github.com/gsubramani/SignalRecognition/blob/master/training_data_fig.png "Training Data")
 
