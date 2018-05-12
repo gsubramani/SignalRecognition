@@ -6,7 +6,6 @@ See the example.py file for usage.
 __author__ = "Guru Subramani"
 
 from wavelet_feature_transform import WaveletFeatureTransform
-from signal_data_base import SignalDB
 import numpy as np
 from scipy import signal
 from sklearn.neural_network import MLPClassifier
