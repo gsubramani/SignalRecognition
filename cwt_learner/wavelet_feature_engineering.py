@@ -26,8 +26,6 @@ class CWT_learner:
         The wavelet used during training
 
     """
-    signal_indices = [0]
-    wavelet = 'morelet'
 
     def __init__(self,initial_training_set = None,signal_indices = None):
         '''
@@ -37,6 +35,10 @@ class CWT_learner:
         :param signal_indices:
             The indices used to train the model
         '''
+
+        self.signal_indices = [0]
+        self.wavelet = 'morelet'
+
         if initial_training_set == None:
             self.training_data_sets = []
         else:
@@ -44,7 +46,8 @@ class CWT_learner:
         self.signal_indices = signal_indices
 
 
-    def get_examples_with_weights(self,ld_array,with_window = "Off",signal_indices = None,wavelet = "morlet"):
+    def get_examples_with_weights(self,ld_array,with_window = "Off",signal_indices = None,wavelet = "morlet",
+                                  features = None):
         """ applies the CWT to the data. It returns the transform. This function converts nd time domain signal into
         the CWT table.
 
@@ -62,8 +65,8 @@ class CWT_learner:
             mf = WaveletFeatureTransform(ld.signal_bundle.signals,ld.signal_bundle.timestamps,scaling = "log",
                                          wavelet=wavelet)
             examples = mf.feature_matrix(magfunc = lambda x : np.log(np.abs(x)),phase = "Yes",
-                                         mag = "Yes",features=(0,10),signal_indices = signal_indices)
-            #print np.shape(examples)
+                                         mag = "Yes",features=features,signal_indices = signal_indices)
+            # print np.shape(examples)
             if with_window == "On": window = np.int32(np.floor(signal.gaussian(len(examples),len(examples)/3)*100))
             else: window = len(examples)*[1];
             for example,weight,label in zip(examples,window,labels):
@@ -72,7 +75,7 @@ class CWT_learner:
 
         return X,Y
 
-    def train(self,classifier = MLPClassifier()):
+    def fit(self,classifier = MLPClassifier()):
         """
         Trains the learning algorithm using the added data.
         :param classifier: Any sklearn classifier can be provided.
@@ -84,9 +87,9 @@ class CWT_learner:
         # print trainX
         self.classifier = classifier.fit(trainX,trainY)
 
-    def fit(self,signals,timestamps = None):
+    def predict(self,signals,timestamps = None):
         """
-        Fits new data to the model providing labels over time.
+        Predicts new data to the model providing labels over time.
         :param signals: A list of numpy arrays or lists of same dimension. Data that needs to be tested on.
         :param timestamps: Time samples. Note that training and fitting the model should have the same sample time!
         :return: list The predicted labels over time.

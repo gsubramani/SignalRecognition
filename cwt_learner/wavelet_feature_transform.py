@@ -3,7 +3,7 @@ import numpy as np
 from warnings import warn
 
 __author__ = 'Guru Subramani'
-"""Some auxilary methods to interface with the wavelet library"""
+"""Some auxiliary methods to interface with the wavelet library"""
 
 
 class WaveletFeatureTransform:
@@ -18,9 +18,9 @@ class WaveletFeatureTransform:
         self.cwt_complex = []
         self.timestamps = self._padArrayPower2ND([timestamps])[0] #since we want to index into [timestamps]array
         #sometimes some signals are empty, filling them with zeros
-        for id, signal in enumerate(signals):
-            if len(signal) == 0:
-                signals[id] = np.zeros(len(signals[0]))
+        # for id, signal in enumerate(signals):
+        #     if len(signal) == 0:
+        #         signals[id] = np.zeros(len(signals[0]))
         self.signals, padsizel, padsizer = self._padArrayPower2ND(signals)
         self._findWaveletTrasform_ND_struct(wavelet = self.wavelet)
         self._clip(padsizel, padsizer)
@@ -47,10 +47,10 @@ class WaveletFeatureTransform:
             feat_indices = features
         else:
             start_feat, end_feat  = features
-            feat_indices = range(start_feat, end_feat)
-            if end_feat >n_feat:
+            if end_feat > n_feat:
                 end_feat = n_feat
                 warn("specified length of features exceeds available freatures")
+            feat_indices = range(start_feat, end_feat)
         n_feat = len(feat_indices)
         if signal_indices == None:
             signal_indices = range(n_sig)
@@ -64,8 +64,13 @@ class WaveletFeatureTransform:
             for id_s, isig in enumerate(signal_indices):
                 for idx_f,ifeat in enumerate(feat_indices):
                     if phase == "Yes" and mag == "Yes":
-                        featmat[iexamp][n_feat * id_s + idx_f] = magfunc(self.cwt_complex[isig][iexamp][ifeat])
-                        featmat[iexamp][n_feat*n_sig  + n_feat*id_s+ idx_f] = phasefunc(self.cwt_complex[isig][iexamp][ifeat])
+                        try:
+                            featmat[iexamp][n_feat * id_s + idx_f] = magfunc(self.cwt_complex[isig][iexamp][ifeat])
+                            featmat[iexamp][n_feat*n_sig  + n_feat*id_s+ idx_f] = phasefunc(self.cwt_complex[isig][iexamp][ifeat])
+                        except:
+                            print n_feat,n_sig,id_s,idx_f,n_feat * id_s + idx_f, np.shape(featmat), np.shape(self.cwt_complex)
+                            print "Something went wrong"
+                            raise
                     if phase == "No" and mag == "Yes":
                         featmat[iexamp][n_feat * id_s + idx_f] = magfunc(self.cwt_complex[isig][iexamp][ifeat])
                     if phase == "Yes" and mag == "No":
